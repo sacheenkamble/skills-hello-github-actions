@@ -7,17 +7,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  ##This workflow contains a single job called "CFTstack"
-  build:
-    name: test-build
+  welcome:
+    name: Post welcome comment
     runs-on: ubuntu-latest
-    
-    ##Add "id-token" with the intended permissions.
-    permissions:
-      contents: read
-      id-token: write
-      
-    steps:
-      ##Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v4
